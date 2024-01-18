@@ -29,16 +29,19 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
+  /* background-color: white; */
 `;
 const Header = styled.div`
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
+  /* background-color: white; */
 `;
 const TodoInput = styled.input`
   width: 200px;
   height: 30px;
   border: 1px solid gray;
+  /* background-color: white; */
 `;
 
 const InsertButton = styled.button`

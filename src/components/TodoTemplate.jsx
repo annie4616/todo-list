@@ -59,5 +59,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* margin: auto; */
+  /* width: 70%; */
+  /* height: 500px; */
+  margin: auto;
+  /* background-color: white; */
 `;

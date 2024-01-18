@@ -23,4 +23,6 @@ const Container = styled.ul`
   align-items: center;
   flex-direction: column;
   padding: 0 0 0 0;
+  /* background-color: white; */
+  margin-top: 10px;
 `;

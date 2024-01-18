@@ -7,7 +7,9 @@ const TodoItem = ({ todos, onDelete, onToggle }) => {
     <ItemCard>
       <div className="content-wrap" onClick={() => onToggle(id)}>
         <div>{checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</div>
-        <Content>{text}</Content>
+        <Content>
+          {checked ? <Checked>{text}</Checked> : <span>{text}</span>}
+        </Content>
       </div>
       <DeleteButton onClick={() => onDelete(id)}>X</DeleteButton>
     </ItemCard>
@@ -16,6 +18,11 @@ const TodoItem = ({ todos, onDelete, onToggle }) => {
 
 export default TodoItem;
 
+const Checked = styled.span`
+  color: gray;
+  text-decoration: line-through;
+`;
+
 const ItemCard = styled.li`
   display: flex;
   flex-direction: row;
@@ -23,18 +30,19 @@ const ItemCard = styled.li`
   width: 250px;
   transition: all 0.3s ease;
   cursor: pointer;
-
   .content-wrap {
+    /* background-color: white; */
     display: flex;
     align-items: center;
     width: 100%;
     &:hover {
-      background-color: #d8d8d8;
+      background-color: #e6e6e6;
     }
   }
 `;
 const Content = styled.span`
   margin: auto 10px auto 5px;
+  /* background-color: white; */
 `;
 const DeleteButton = styled.div`
   background-color: #fa8484;
